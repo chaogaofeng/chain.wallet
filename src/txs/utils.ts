@@ -1,6 +1,6 @@
 import BigNumber from "bignumber.js"
 import { readAmount, toAmount } from "@terra.kitchen/utils"
-import { Coin, Coins } from "@terra-money/terra.js"
+import { Coin, Coins } from "@gnchain/chain.js"
 import { has } from "utils/num"
 
 export const getPlaceholder = (decimals = 6) => "0.".padEnd(decimals + 2, "0")

@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { MnemonicKey } from "@terra-money/terra.js"
+import { MnemonicKey } from "@gnchain/chain.js"
 import CreateWalletWizard from "./CreateWalletWizard"
 import Quiz from "./Quiz"
 

@@ -1,4 +1,4 @@
-import { Proposal } from "@terra-money/terra.js"
+import { Proposal } from "@gnchain/chain.js"
 import xss from "xss"
 
 const ProposalDescription = ({ proposal }: { proposal: Proposal }) => {

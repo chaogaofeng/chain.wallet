@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { LCDClient } from "@terra-money/terra.js"
+import { LCDClient } from "@gnchain/chain.js"
 import { useNetwork } from "data/wallet"
 
 export const useLCDClient = () => {

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import { AccAddress, Coin } from "@terra-money/terra.js"
+import { AccAddress, Coin } from "@gnchain/chain.js"
 import { getMaxHeightStyle } from "utils/style"
 import { combineState } from "data/query"
 import { useMemoizedCalcValue } from "data/queries/oracle"

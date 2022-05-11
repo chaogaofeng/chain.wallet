@@ -1,4 +1,4 @@
-import { AccAddress } from "@terra-money/terra.js"
+import { AccAddress } from "@gnchain/chain.js"
 import { useCustomTokensCW721 } from "data/settings/CustomTokens"
 import { useCW721Whitelist } from "data/Terra/TerraAssets"
 import { useInitMsg } from "data/queries/wasm"

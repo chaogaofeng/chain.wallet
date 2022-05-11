@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Coins } from "@terra-money/terra.js"
+import { Coins } from "@gnchain/chain.js"
 import createContext from "utils/createContext"
 import { combineState } from "data/query"
 import { useActiveDenoms, useExchangeRates } from "data/queries/oracle"

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { useSearchParams } from "react-router-dom"
-import { AccAddress } from "@terra-money/terra.js"
+import { AccAddress } from "@gnchain/chain.js"
 import { getAmount } from "utils/coin"
 import { useTokenBalance } from "data/queries/wasm"
 import { useBankBalance } from "data/queries/bank"
