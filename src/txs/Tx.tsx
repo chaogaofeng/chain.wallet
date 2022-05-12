@@ -444,9 +444,9 @@ export default Tx
 
 /* utils */
 export const getInitialGasDenom = (bankBalance: Coins) => {
-  const denom = head(sortCoins(bankBalance))?.denom ?? "uusd"
-  const uusd = getAmount(bankBalance, "uusd")
-  return has(uusd) ? "uusd" : denom
+  const denom = head(sortCoins(bankBalance))?.denom ?? "ugnc"
+  const uusd = getAmount(bankBalance, "ugnc")
+  return has(uusd) ? "ugnc" : denom
 }
 
 interface Params {

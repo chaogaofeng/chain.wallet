@@ -149,12 +149,12 @@ const SendForm = ({ token, decimals, balance }: Props) => {
             {({ max, fee, submit }) => (
               <Form onSubmit={handleSubmit(submit.fn)}>
                 <Grid gap={4}>
-                  <FormHelp>Use {bridge} for interchain transfers</FormHelp>
+                  {/* <FormHelp>Use {bridge} for interchain transfers</FormHelp>
                   {!memo && (
                     <FormWarning>
                       {t("Check if this transaction requires a memo")}
                     </FormWarning>
-                  )}
+                  )} */}
                 </Grid>
 
                 <FormItem

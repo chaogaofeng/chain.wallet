@@ -49,7 +49,7 @@ export const useInitialBankBalance = () => {
 
 export const useTerraNativeLength = () => {
   const bankBalance = useBankBalance()
-  return bankBalance?.toArray().filter(({ denom }) => isDenomTerraNative(denom))
+  return bankBalance?.toArray() /*.filter(({ denom }) => isDenomTerraNative(denom))*/
     .length
 }
 
