@@ -1,10 +1,14 @@
 import { Coins, Dec } from "@gnchain/chain.js"
 import { useCallback, useMemo } from "react"
+// eslint-disable-next-line
 import { useQuery } from "react-query"
+// eslint-disable-next-line
 import { getAmount, sortCoins, sortDenoms } from "utils/coin"
 import { toPrice } from "utils/num"
+// eslint-disable-next-line
 import { queryKey, RefetchOptions } from "../query"
 import { useCurrency } from "../settings/Currency"
+// eslint-disable-next-line
 import { useLCDClient } from "./lcdClient"
 
 export const useActiveDenoms = () => {

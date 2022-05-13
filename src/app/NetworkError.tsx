@@ -1,12 +1,14 @@
 import { useTranslation } from "react-i18next"
 import Logo from "styles/images/LocalTerra.png"
 import { useNetworkState } from "data/wallet"
+// eslint-disable-next-line
 import { Button, ExternalLink } from "components/general"
 import { FlexColumn } from "components/layout"
 import styles from "./NetworkError.module.scss"
 
 const NetworkError = () => {
   const { t } = useTranslation()
+  // eslint-disable-next-line
   const [network, setNetwork] = useNetworkState()
 
   const isLocalTerra = network === "localhost"

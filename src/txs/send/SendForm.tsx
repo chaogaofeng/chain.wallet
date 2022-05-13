@@ -10,8 +10,10 @@ import { queryKey } from "data/query"
 import { useAddress } from "data/wallet"
 import { useBankBalance } from "data/queries/bank"
 import { useTnsAddress } from "data/external/tns"
+// eslint-disable-next-line
 import { ExternalLink } from "components/general"
 import { Auto, Card, Grid, InlineFlex } from "components/layout"
+// eslint-disable-next-line
 import { Form, FormItem, FormHelp, Input, FormWarning } from "components/form"
 import AddressBookList from "../AddressBook/AddressBookList"
 import { getPlaceholder, toInput } from "../utils"
@@ -43,6 +45,7 @@ const SendForm = ({ token, decimals, balance }: Props) => {
   const { register, trigger, watch, setValue, setError, handleSubmit } = form
   const { formState } = form
   const { errors } = formState
+  // eslint-disable-next-line
   const { recipient, input, memo } = watch()
   const amount = toAmount(input, { decimals })
 
@@ -127,9 +130,9 @@ const SendForm = ({ token, decimals, balance }: Props) => {
       : undefined,
   }
 
-  const bridge = (
-    <ExternalLink href="https://bridge.terra.money">Terra Bridge</ExternalLink>
-  )
+  // const bridge = (
+  //   <ExternalLink href="https://bridge.terra.money">Terra Bridge</ExternalLink>
+  // )
 
   const renderResolvedAddress = () => {
     if (!resolvedAddress) return null

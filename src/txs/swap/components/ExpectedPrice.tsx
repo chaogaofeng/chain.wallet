@@ -3,6 +3,7 @@ import { isDenomLuna, isDenomTerra } from "@terra.kitchen/utils"
 import { readPercent } from "@terra.kitchen/utils"
 import { toPrice } from "utils/num"
 import { useMarketParams } from "data/queries/market"
+// eslint-disable-next-line
 import { useOracleParams } from "data/queries/oracle"
 import { Read } from "components/token"
 import { TooltipIcon } from "components/display"
