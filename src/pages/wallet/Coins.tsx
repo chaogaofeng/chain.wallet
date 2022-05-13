@@ -63,6 +63,7 @@ const Coins = () => {
     )
   }
 
+  // eslint-disable-next-line
   const extra = (
     <InternalLink
       icon={<BoltIcon style={{ fontSize: 18 }} />}
@@ -74,7 +75,7 @@ const Coins = () => {
   )
 
   return (
-    <Card {...state} title={t("Coins")} extra={extra}>
+    <Card {...state} title={t("Coins")} /*extra={extra}*/>
       <Grid gap={32}>{render()}</Grid>
     </Card>
   )
@@ -99,9 +100,7 @@ export const useCoins = (denoms?: Denom[]) => {
       const valueByUST = calcValueByUST({ amount: balance, denom }) ?? 0
       return { denom, balance, value: value, $: valueByUST }
     })
-    .filter(
-      ({ denom, balance }) => ["uluna", "uusd"].includes(denom) || has(balance)
-    )
+    .filter(({ denom, balance }) => ["ugnc"].includes(denom) || has(balance))
 
   const coins = sortByDenom(
     nativeTokenValues,

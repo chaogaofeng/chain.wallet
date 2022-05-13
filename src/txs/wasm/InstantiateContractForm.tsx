@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import { useFieldArray, useForm } from "react-hook-form"
 import AddIcon from "@mui/icons-material/Add"
 import RemoveIcon from "@mui/icons-material/Remove"
+// eslint-disable-next-line
 import { isDenomTerraNative, readDenom } from "@terra.kitchen/utils"
 import { AccAddress } from "@gnchain/chain.js"
 import { MsgInstantiateContract } from "@gnchain/chain.js"
@@ -142,7 +143,7 @@ const InstantiateContractForm = () => {
                   selectBefore={
                     <Select {...register(`coins.${index}.denom`)} before>
                       {sortCoins(bankBalance)
-                        .filter(({ denom }) => isDenomTerraNative(denom))
+                        //.filter(({ denom }) => isDenomTerraNative(denom))
                         .map(({ denom }) => (
                           <option value={denom} key={denom}>
                             {readDenom(denom)}

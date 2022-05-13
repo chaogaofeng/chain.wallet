@@ -55,6 +55,7 @@ export const useTerraNativeLength = () => {
 }
 
 export const useIsWalletEmpty = () => {
-  const length = useTerraNativeLength()
-  return !length
+  return false
+  // const length = useTerraNativeLength()
+  // return !length
 }

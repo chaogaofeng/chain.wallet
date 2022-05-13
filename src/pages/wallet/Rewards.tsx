@@ -51,7 +51,7 @@ const Rewards = () => {
               <Read
                 className={styles.number}
                 amount={delegationTotal}
-                denom="uluna"
+                denom="ugnc"
               />
             </Grid>
           )}
@@ -62,7 +62,7 @@ const Rewards = () => {
               <Read
                 className={styles.number}
                 amount={unbondingsTotal}
-                denom="uluna"
+                denom="ugnc"
               />
             </Grid>
           )}

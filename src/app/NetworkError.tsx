@@ -19,18 +19,20 @@ const NetworkError = () => {
 
       <article>
         <h1 className={styles.title}>
-          {network === "mainnet"
+          {
+            /*network === "mainnet"
             ? t("Too many requests. Try again later.")
-            : isLocalTerra
-            ? t("localhost is not running, please start")
-            : t(`${network} is not running`)}
+            :*/ isLocalTerra
+              ? t("localhost is not running, please start")
+              : t(`${network} is not running`)
+          }
         </h1>
 
-        {isLocalTerra && (
+        {/* {isLocalTerra && (
           <ExternalLink href="https://github.com/terra-money/localterra">
             {t("Learn more")}
           </ExternalLink>
-        )}
+        )} */}
       </article>
 
       {/* {network === "mainnet" ? (

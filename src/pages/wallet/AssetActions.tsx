@@ -1,15 +1,21 @@
 import { useTranslation } from "react-i18next"
 import { flatten, uniq } from "ramda"
+// eslint-disable-next-line
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined"
 import ShortcutOutlinedIcon from "@mui/icons-material/ShortcutOutlined"
+// eslint-disable-next-line
 import RestartAltIcon from "@mui/icons-material/RestartAlt"
+// eslint-disable-next-line
 import { isDenomTerraNative } from "@terra.kitchen/utils"
 import { has } from "utils/num"
 import { useIsWalletEmpty } from "data/queries/bank"
 import { useCW20Pairs } from "data/Terra/TerraAssets"
+// eslint-disable-next-line
 import { InternalButton, InternalLink } from "components/general"
 import { ExtraActions } from "components/layout"
+// eslint-disable-next-line
 import { ModalButton } from "components/feedback"
+// eslint-disable-next-line
 import Buy from "./Buy"
 import { Props } from "./Asset"
 
@@ -21,14 +27,16 @@ const AssetActions = ({ token, symbol, balance }: Props) => {
 
   if (!pairs) return null
 
+  // eslint-disable-next-line
   const terraswapAvailableList = uniq(flatten(Object.values(pairs)))
+  // eslint-disable-next-line
   const getIsSwappableToken = (token: TerraAddress) =>
     isDenomTerraNative(token) ||
     terraswapAvailableList.find(({ assets }) => assets.includes(token))
 
   return (
     <ExtraActions>
-      {(token === "uluna" || token === "uusd") && (
+      {/* {(token === "uluna" || token === "uusd") && (
         <ModalButton
           title={t("Buy {{symbol}}", { symbol })}
           renderButton={(open) => (
@@ -43,7 +51,7 @@ const AssetActions = ({ token, symbol, balance }: Props) => {
         >
           <Buy token={token} />
         </ModalButton>
-      )}
+      )} */}
 
       <InternalLink
         icon={<ShortcutOutlinedIcon style={{ fontSize: 18 }} />}
@@ -53,14 +61,14 @@ const AssetActions = ({ token, symbol, balance }: Props) => {
         {t("Send")}
       </InternalLink>
 
-      <InternalLink
+      {/* <InternalLink
         icon={<RestartAltIcon style={{ fontSize: 18 }} />}
         to="/swap"
         state={token}
         disabled={isWalletEmpty || !has(balance) || !getIsSwappableToken(token)}
       >
         {t("Swap")}
-      </InternalLink>
+      </InternalLink> */}
     </ExtraActions>
   )
 }

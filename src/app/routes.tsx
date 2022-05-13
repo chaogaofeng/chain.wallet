@@ -3,8 +3,10 @@ import { useTranslation } from "react-i18next"
 import { useNavigate, useRoutes } from "react-router-dom"
 
 import { ReactComponent as WalletIcon } from "styles/images/menu/Wallet.svg"
+// eslint-disable-next-line
 import { ReactComponent as NFTIcon } from "styles/images/menu/NFT.svg"
 import { ReactComponent as HistoryIcon } from "styles/images/menu/History.svg"
+// eslint-disable-next-line
 import { ReactComponent as SwapIcon } from "styles/images/menu/Swap.svg"
 import { ReactComponent as StakeIcon } from "styles/images/menu/Stake.svg"
 import { ReactComponent as GovernanceIcon } from "styles/images/menu/Governance.svg"
@@ -13,6 +15,7 @@ import { ReactComponent as ContractIcon } from "styles/images/menu/Contract.svg"
 /* menu */
 import Dashboard from "pages/dashboard/Dashboard"
 import Wallet from "pages/wallet/Wallet"
+// eslint-disable-next-line
 import NFT from "pages/nft/NFT"
 import History from "pages/history/History"
 import Stake from "pages/stake/Stake"
@@ -26,6 +29,7 @@ import ProposalDetails from "pages/gov/ProposalDetails"
 /* txs */
 import SendTx from "txs/send/SendTx"
 import TransferCW721Tx from "txs/wasm/TransferCW721Tx"
+// eslint-disable-next-line
 import SwapTx from "txs/swap/SwapTx"
 import SwapMultipleTx from "txs/swap/SwapMultipleTx"
 import StakeTx from "txs/stake/StakeTx"
@@ -75,12 +79,12 @@ export const useNav = () => {
       title: t("History"),
       icon: <HistoryIcon {...ICON_SIZE} />,
     },
-    {
-      path: "/swap",
-      element: <SwapTx />,
-      title: t("Swap"),
-      icon: <SwapIcon {...ICON_SIZE} />,
-    },
+    // {
+    //   path: "/swap",
+    //   element: <SwapTx />,
+    //   title: t("Swap"),
+    //   icon: <SwapIcon {...ICON_SIZE} />,
+    // },
     {
       path: "/stake",
       element: <Stake />,
@@ -93,12 +97,12 @@ export const useNav = () => {
       title: t("Governance"),
       icon: <GovernanceIcon {...ICON_SIZE} />,
     },
-    {
-      path: "/nft",
-      element: <NFT />,
-      title: t("NFT"),
-      icon: <NFTIcon {...ICON_SIZE} />,
-    },
+    // {
+    //   path: "/nft",
+    //   element: <NFT />,
+    //   title: t("NFT"),
+    //   icon: <NFTIcon {...ICON_SIZE} />,
+    // },
     {
       path: "/contract",
       element: <Contract />,
