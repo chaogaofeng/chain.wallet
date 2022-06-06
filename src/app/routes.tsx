@@ -13,6 +13,7 @@ import { ReactComponent as GovernanceIcon } from "styles/images/menu/Governance.
 import { ReactComponent as ContractIcon } from "styles/images/menu/Contract.svg"
 
 /* menu */
+// eslint-disable-next-line
 import Dashboard from "pages/dashboard/Dashboard"
 import Wallet from "pages/wallet/Wallet"
 // eslint-disable-next-line
@@ -112,7 +113,7 @@ export const useNav = () => {
   ]
 
   const routes = [
-    { path: "/", element: <Dashboard /> },
+    { path: "/", element: <Wallet /> },
 
     /* pages */
     ...menu,

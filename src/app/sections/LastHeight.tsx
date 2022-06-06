@@ -22,7 +22,7 @@ const LastHeight = () => {
 
       {height ? (
         <FinderLink className={styles.link} value={height} block>
-          #{formatNumber(height, { comma: true })}
+          {formatNumber(height, { comma: true })}
         </FinderLink>
       ) : (
         <p className={styles.text}>{t("Loading...")}</p>

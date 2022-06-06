@@ -21,17 +21,19 @@ interface Props extends HTMLAttributes<HTMLAnchorElement> {
 const FinderLink: FC<Props> = forwardRef(
   ({ children, short, ...rest }, ref: ForwardedRef<HTMLAnchorElement>) => {
     const { block, tx, validator, ...attrs } = rest
+    // eslint-disable-next-line
     const networkName = useNetworkName()
     const path = tx
-      ? "tx"
+      ? "transactions"
       : block
-      ? "block"
+      ? "blocks"
       : validator
-      ? "validator"
-      : "address"
+      ? "validators"
+      : "accounts"
 
     const value = rest.value ?? children
-    const link = [FINDER, networkName, path, value].join("/")
+    // const link = [FINDER, networkName, path, value].join("/")
+    const link = [FINDER, path, value].join("/")
     const className = classNames(attrs.className, styles.link)
 
     return (
